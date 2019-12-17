@@ -188,8 +188,15 @@ function getLastCarInfo(carList) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(carList, idNum) {
+ let carInfo = {};
+ for (let i=0; i < carList.length; i++) {
+   carInfo = carList[i];
+   if (carList[i].id = idNum){
+    return `This is a ${carInfo.car_make} ${carInfo.car_model}`
+   }
+ }
+  
 }
 
 /**
@@ -200,8 +207,8 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(carList) {
+  // carList[car_model].sort();
 }
 
 /**
@@ -213,8 +220,12 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(carList) {
+  // /* code here */
+  // carList.forEach(carList{car_year}){
+    
+  //   return modelYearsArray;
+  // }
 }
 
 /**
