@@ -342,7 +342,8 @@ function carMaker(odometerParam) {
     const carOdometer = {
       odometer: odometerParam,
       drive: function(num1) {
-        return odometerParam * num1;
+        this.odometer = this.odometer + num1;
+        return this.odometer;
       }
     }
     return carOdometer;
